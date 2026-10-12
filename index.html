@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Honk:MORF@15&family=Nosifer&display=swap"
+    rel="stylesheet">
+  <style>
+    @keyframes circleopen {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+
+    @keyframes nav {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes content {
+      0% {
+        transform: translateY(35px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .circle-animation {
+      animation: circleopen 1.8s ease-out forwards;
+    }
+
+    .nav-animation {
+      animation: nav 1.8s ease-out forwards;
+    }
+
+    .content-animation {
+      animation: content 2s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class=" min-h-screen w-full bg-[#0b0b0d] overflow-x-hidden">
+  <!-- BACKGROUND VIDEO -->
+  <video autoplay muted loop playsinline class="fixed left-0 top-0 -z-10 h-full w-full object-cover">
+
+    <source src="bg-video.mp4" type="video/mp4">
+
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="fixed inset-0 -z-10 bg-black/70"></div>
+
+  <nav
+    class="nav-animation flex  absolute z-50  bg-white/10 text-white p-[10px] w-full justify-around top-4  rounded-[50px] ">
+    <div class="flex gap-20">
+      <a
+        class="hover:bg-white/30 p-1 px-2 rounded-lg border border-transparent  hover:border-white hover:shadow-[0_0_20px_rgba(139,92,246,1)]  transition">Home</a>
+      <a
+        class="hover:bg-white/30 p-1 px-2 rounded-lg border border-transparent  hover:border-white hover:shadow-[0_0_20px_rgba(139,92,246,1)]  transition">About</a>
+      <a
+        class="hover:bg-white/30 p-1 px-2 rounded-lg border border-transparent hover:border-white hover:shadow-[0_0_20px_rgba(139,92,246,1)]  transition">Skills</a>
+      <a
+        class="hover:bg-white/30 p-1 px-2 rounded-lg border border-transparent hover:border-white hover:shadow-[0_0_20px_rgba(139,92,246,1)]  transition">Contact</a>
+    </div>
+    <button
+      class="hover:bg-white/30 p-1 px-2 rounded-lg border border-transparent hover:border-white hover:shadow-[0_0_20px_rgba(139,92,246,1)]  transition">Let's
+      Connect</button>
+  </nav>
+
+  <section class="h-screen w-full flex justify-center items-center relative">
+    <!-- circle -->
+    <div
+      class="circle-animation absolute w-[800px] h-[700px] rounded-full border border-white/10 [box-shadow:0_0_40px_#f3eddf66]  z-0">
+    </div>
+    <!-- hero content -->
+    <div class="content-animation   z-10">
+      <span class=" text-7xl font-['Nosifer'] bg-gradient-to-r from-[#ffff]/60   to-[#ffff]/30 bg-clip-text text-transparent [text-shadow:0_0_1.5vh_rgba(255,255,255,0.6)] ">HI, I'm Anam<br>Choudhary</span><br /><br>
+      <p class="text-white ml-4 text-xl font-['Signika']">I'm a first-year Ai & Data science student passionate about technology,<br> problem-solving,
+        and building meaningful digital experiences.</p><br><br>
+      <button
+        class="text-white bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:bg-white/30 hover:border-purple-300/50 hover:shadow-[0_0_10px_rgba(139,92,246,1)] transition-all duration-300 px-6 py-3 rounded-lg ml-28 font-['Signika']">View
+        My Work</button>
+      <button
+        class="text-white text-md bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:bg-white/30 hover:border-purple-300/50 hover:shadow-[0_0_10px_rgba(139,92,246,1)] transition-all duration-300 px-6 py-3 rounded-lg font-['Signika']">Let's
+        Connect</button>
+    </div>
+  </section>
+
+  <br><br><br><br><br>
+
+  <!-- about -->
+  <section class="flex justify-around">
+    <div>
+      <h1 class=" text-5xl font-bold font-['Playfair_Display']  text-[#f3eddf]">About Me</h1><br />
+      <p class="text-white text-2xl font-['Signika']">A curious mind, a problem solver, and a future builder.</p><br><br><br>
+      <p class="text-white text-xl font-['Signika']">I'm a first-year B.VOC student in Ai & Data Science,<br>paasionte about technology,
+        innovation,
+        and creating meaningful<br> digital experiences. Love to Exploring new ideas, learning new skills,<br> and
+        working
+        on projrcts that make an impact.
+      </p><br>
+      <p class="text-white text-xl font-['Signika']">Still learning, always exploring, and never afraid to start from scratch.<br> I'm building my journey in AI & Data Science,
+      one experiment,<br> one idea, and one project at a time.</p>
+      <br>
+
+    </div>
+    <div class="grid grid-cols-1 gap-4">
+      <div
+        class=" w-[380px] h-32 bg-white/10  border-[#D4AF37]/50 shadow-md  hover:shadow-[#f3eddf] rounded-2xl text-white p-2 px-8 ">
+        <p class="text-lg font-bold font-['Playfair_Display']  text-[#f3eddf]">Schooling</p>
+        <p class="text-cyan-500">2022-2023</p>
+        <p>Completed my 10th from<br>(karthika high school)</p>
+      </div>
+      <div
+        class="w-[380px] h-32 bg-white/10  border border-[#D4AF37]/50 shadow-md   hover:shadow-[#f3eddf] rounded-2xl text-white p-2 px-8">
+        <p class="text-lg font-bold font-['Playfair_Display']  text-[#f3eddf]">Jr.College</p>
+        <p class="text-emerald-500">2023-2025</p>
+        <p>Completed my 12th from<br>(karthika high school & Jr. College)</p>
+      </div>
+      <div
+        class="w-[380px] h-32 bg-white/10  border border-[#D4AF37]/50 shadow-md hover:shadow-[#f3eddf] rounded-2xl text-white p-2 px-8">
+        <p class="text-lg font-bold font-['Playfair_Display']  text-[#f3eddf]">AI & Data Science</p>
+        <p class="text-purple-500">2026-Present</p>
+        <p>Pursuing from<br>(Nexcore Institute Of Technology)</p>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br><br><br><br>
+
+  <!-- skills -->
+  <p
+    class="text-5xl font-bold font-['Playfair_Display']  text-[#f3eddf] text-center">
+    Skills & Technology</p><br><br><br>
+
+    <section class="grid grid-cols-4 gap-8 px-6 ">
+    <div
+      class="bg-white/10 border border-white/20 w-full min-w-0 rounded-2xl p-4 transition-all duration-300  hover:-translate-y-2 hover:shadow  hover:shadow-orange-400 bg-white  ">
+      <img src="https://img.icons8.com/color/48/html-5--v1.png" class="w-16 h-16">
+      <p class="text-2xl font-bold text-white">HTML</p><br>
+      <p class="text-white text-lg">Semantic structure &<br>accescible web pages</p><br>
+      <div class="w-[250px] h-[10px] bg-white/30 rounded-full">
+        <div class="w-[90%] h-full bg-orange-500 rounded-full"></div>
+        <p class="text-white font-semibold leading-loose">90%</p>
+      </div>
+    </div>
+    <div
+      class="bg-white/10 border border-white/20 w-full min-w-0 rounded-2xl p-4 transition-all duration-300  hover:-translate-y-2 hover:shadow  hover:shadow-blue-400">
+      <img src="https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000" class="w-16 h-16">
+      <p class="text-2xl font-bold text-white">TAILWIND</p><br>
+      <p class="text-white text-lg">Responsive layouts &<br>utility first-styling</p><br>
+      <div class="w-[250px] h-[10px] bg-white/30 rounded-full">
+        <div class="w-[85%] h-full bg-blue-400 rounded-full"></div>
+      </div>
+      <p class="text-white font-semibold leading-loose">85%</p>
+    </div>
+    <div
+      class="bg-white/10 border border-white/20 w-full min-w-0 rounded-2xl p-4 transition-all duration-300  hover:-translate-y-2 hover:shadow  hover:shadow-yellow-400">
+      <img src="https://img.icons8.com/?size=100&id=k0mhEXozIpG1&format=png&color=000000" class="w-16 h-16">
+      <p class="text-2xl font-bold text-white">JAVASCRIPT</p><br>
+      <p class="text-white text-lg">DOM events & interactive UI</p><br>
+      <div class="w-[250px] h-[10px] bg-white/30 rounded-full">
+        <div class="w-[40%] h-full bg-yellow-400 rounded-full"></div>
+        <p class="text-white font-semibold leading-loose">40%</p>
+      </div>
+    </div>
+    <div
+      class="bg-white/10 border border-white/20 w-full min-w-0 rounded-2xl p-4 transition-all duration-300  hover:-translate-y-2 hover:shadow  hover:shadow-blue-500">
+      <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" class="w-16 h-16">
+      <p class="text-2xl font-bold text-white">CSS</p>
+      <p class="text-white text-lg">Styling layouts &<br>Visual design</p><br>
+      <div class="w-[250px] h-[10px] bg-white/30 rounded-full">
+        <div class="w-[80%] h-full bg-blue-500 rounded-full"></div>
+        <p class="text-white font-semibold leading-loose">80%</p>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+
+  </section>
+
+
+
+</body>
+
+</html>
